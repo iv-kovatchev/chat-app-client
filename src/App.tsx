@@ -1,10 +1,21 @@
 import React from 'react';
+import { Container, createTheme, CssBaseline, ThemeProvider } from '@mui/material';
+import Auth from './components/Auth';
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark'
+  }
+});
 
 const App = () => {
   return (
-    <div>
-      Hello
-    </div>
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
+      <Container>
+        <Auth />
+      </Container>
+    </ThemeProvider>
   );
 }
 
